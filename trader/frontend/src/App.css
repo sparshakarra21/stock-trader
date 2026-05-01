@@ -1,0 +1,69 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1117; color: #e1e4e8; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* Auth */
+.auth-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.auth-card { background: #1c1f26; padding: 2rem; border-radius: 12px; width: 380px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+.auth-card h2 { margin-bottom: 1.5rem; color: #58a6ff; text-align: center; }
+.auth-card form { display: flex; flex-direction: column; gap: 0.75rem; }
+.auth-card label { font-size: 0.85rem; color: #8b949e; }
+.auth-card input { padding: 0.7rem; border: 1px solid #30363d; border-radius: 6px; background: #0d1117; color: #e1e4e8; font-size: 1rem; }
+.auth-card input:focus { outline: none; border-color: #58a6ff; }
+.auth-card button { padding: 0.75rem; background: #238636; color: white; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; margin-top: 0.5rem; }
+.auth-card button:hover { background: #2ea043; }
+.auth-card p { text-align: center; margin-top: 1rem; color: #8b949e; }
+.auth-card a { color: #58a6ff; text-decoration: none; }
+.error { color: #f85149; text-align: center; font-size: 0.9rem; }
+
+/* Dashboard */
+.dashboard { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+.dashboard-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #30363d; margin-bottom: 1rem; }
+.dashboard-header h1 { font-size: 1.5rem; }
+.header-right { display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; }
+.balance { color: #3fb950; font-weight: 600; }
+.logout-btn { padding: 0.4rem 1rem; background: #da3633; color: white; border: none; border-radius: 6px; cursor: pointer; }
+.logout-btn:hover { background: #f85149; }
+
+/* Toast */
+.toast { background: #1c1f26; border: 1px solid #30363d; padding: 0.75rem 1.5rem; border-radius: 8px; text-align: center; margin-bottom: 1rem; color: #58a6ff; }
+
+/* Tabs */
+.tabs { display: flex; gap: 0; border-bottom: 1px solid #30363d; margin-bottom: 1.5rem; }
+.tabs button { padding: 0.75rem 1.5rem; background: none; border: none; color: #8b949e; cursor: pointer; font-size: 0.95rem; border-bottom: 2px solid transparent; }
+.tabs button.active { color: #58a6ff; border-bottom-color: #58a6ff; }
+.tabs button:hover { color: #e1e4e8; }
+
+/* Tables */
+.stock-table { width: 100%; border-collapse: collapse; }
+.stock-table th { text-align: left; padding: 0.75rem; color: #8b949e; font-size: 0.85rem; border-bottom: 1px solid #30363d; }
+.stock-table td { padding: 0.75rem; border-bottom: 1px solid #21262d; }
+.symbol { font-weight: 700; color: #58a6ff; }
+.price { color: #3fb950; font-weight: 600; }
+
+/* Progress bar */
+.progress-bar { position: relative; background: #21262d; border-radius: 10px; height: 22px; overflow: hidden; min-width: 100px; }
+.progress-fill { background: linear-gradient(90deg, #238636, #3fb950); height: 100%; border-radius: 10px; transition: width 0.5s ease; }
+.progress-bar span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.75rem; font-weight: 600; }
+
+/* Trade controls */
+.qty-input { width: 60px; padding: 0.4rem; background: #0d1117; border: 1px solid #30363d; border-radius: 4px; color: #e1e4e8; text-align: center; }
+.actions { display: flex; gap: 0.5rem; }
+.buy-btn { padding: 0.4rem 0.8rem; background: #238636; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+.buy-btn:hover { background: #2ea043; }
+.sell-btn { padding: 0.4rem 0.8rem; background: #da3633; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+.sell-btn:hover { background: #f85149; }
+
+/* Transaction badges */
+.badge { padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+.badge.buy { background: #238636; color: white; }
+.badge.sell { background: #da3633; color: white; }
+
+.empty-state { color: #8b949e; text-align: center; padding: 2rem; }
+
+@media (max-width: 768px) {
+  .dashboard-header { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .header-right { flex-wrap: wrap; justify-content: center; }
+  .stock-table { font-size: 0.85rem; }
+}
